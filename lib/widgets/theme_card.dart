@@ -13,7 +13,7 @@ class ThemeCard extends ConsumerWidget {
       margin: EdgeInsets.symmetric(vertical: 20, horizontal: 50),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
-        color: Colors.teal[300],
+        color: Colors.teal[400],
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
