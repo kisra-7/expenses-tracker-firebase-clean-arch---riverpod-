@@ -126,6 +126,9 @@ class HomePage extends ConsumerWidget {
                           date: DateTime.now(),
                         ),
                       );
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(content: Center(child: Text('Expense added'))),
+                  );
                 },
                 child: Container(
                   margin: EdgeInsets.all(5),
