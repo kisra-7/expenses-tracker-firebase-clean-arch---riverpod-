@@ -24,9 +24,9 @@ class App extends ConsumerWidget {
       themeMode: ref.watch(themeProvider).isDark
           ? ThemeMode.dark
           : ThemeMode.light,
-      home: FirebaseAuth.instance.currentUser != null
-          ? HomePage()
-          : SignInPage(),
+      home: FirebaseAuth.instance.currentUser == null
+          ? SignInPage()
+          : HomePage(),
       debugShowCheckedModeBanner: false,
     );
   }

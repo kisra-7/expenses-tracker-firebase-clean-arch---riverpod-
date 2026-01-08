@@ -29,11 +29,13 @@ class HomePage extends ConsumerWidget {
         actions: [
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: CircleAvatar(
-              backgroundImage: NetworkImage(
-                FirebaseAuth.instance.currentUser!.photoURL!,
-              ),
-            ),
+            child: FirebaseAuth.instance.currentUser!.photoURL != null
+                ? CircleAvatar(
+                    backgroundImage: NetworkImage(
+                      FirebaseAuth.instance.currentUser!.photoURL!,
+                    ),
+                  )
+                : Icon(Icons.person),
           ),
         ],
       ),
@@ -114,6 +116,19 @@ class HomePage extends ConsumerWidget {
               SizedBox(height: 20),
               InkWell(
                 onTap: () {
+                  if (titleController.text == '' ||
+                      discriptionController.text == '' ||
+                      costController.text == '') {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        content: Text(
+                          'Please Enter All The Fields',
+                          style: TextStyle(color: Colors.black, fontSize: 17),
+                        ),
+                      ),
+                    );
+                    return;
+                  }
                   ref
                       .watch(dbProvider.notifier)
                       .upLoadExpenseToDb(

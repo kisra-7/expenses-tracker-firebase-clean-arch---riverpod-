@@ -18,7 +18,6 @@ print(userCredential.user?.email);
   // ignore: use_build_context_synchronously
   ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(e.message.toString())));
 }
-
  }
 
 
@@ -31,8 +30,5 @@ final userCredintials = await FirebaseAuth.instance.createUserWithEmailAndPasswo
    // ignore: use_build_context_synchronously
    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(e.message.toString())));
   }
- 
   }
-
-
 }

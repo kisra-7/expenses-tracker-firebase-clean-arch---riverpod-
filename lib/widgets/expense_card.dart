@@ -14,6 +14,16 @@ class ExpenseCard extends ConsumerWidget {
       key: Key(expense.id),
       onDismissed: (direction) {
         ref.watch(dbProvider.notifier).deleteExpenseFromDb(index);
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Center(
+              child: Text(
+                'Expense Deleted',
+                style: TextStyle(color: Colors.black, fontSize: 17),
+              ),
+            ),
+          ),
+        );
       },
       child: Container(
         padding: EdgeInsets.all(20),
