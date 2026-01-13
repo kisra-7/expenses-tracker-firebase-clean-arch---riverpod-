@@ -1,3 +1,4 @@
+import 'package:expenses_tracker/pages/settings_page.dart';
 import 'package:expenses_tracker/pages/sign_in_page.dart';
 import 'package:expenses_tracker/widgets/theme_card.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -10,6 +11,7 @@ class MyDrawer extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return Drawer(
+      surfaceTintColor: Colors.white,
       child: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
@@ -17,15 +19,29 @@ class MyDrawer extends ConsumerWidget {
             InkWell(
               onTap: () {
                 Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return SettingsPage();
+                    },
+                  ),
+                );
               },
               child: Container(
-                padding: EdgeInsets.all(15),
-                margin: EdgeInsets.all(20),
+                width: MediaQuery.of(context).size.width * 0.45,
+                padding: EdgeInsets.all(10),
+                margin: EdgeInsets.symmetric(horizontal: 10, vertical: 20),
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  color: const Color.fromARGB(255, 176, 83, 114),
+                  borderRadius: BorderRadius.circular(12),
+                  color: Colors.teal[300],
                 ),
-                child: Text('S E T T I N G S'),
+                child: Center(
+                  child: Text(
+                    'S E T T I N G S',
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                ),
               ),
             ),
             InkWell(
@@ -80,20 +96,18 @@ class MyDrawer extends ConsumerWidget {
                 );
               },
               child: Container(
+                width: MediaQuery.of(context).size.width * 0.45,
                 padding: EdgeInsets.all(10),
-                margin: EdgeInsets.symmetric(vertical: 20, horizontal: 50),
+                margin: EdgeInsets.symmetric(vertical: 0, horizontal: 50),
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
+                  borderRadius: BorderRadius.circular(12),
                   color: Colors.teal[300],
                 ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      'L O G  O U T',
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                  ],
+                child: Center(
+                  child: Text(
+                    'L O G  O U T',
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
                 ),
               ),
             ),

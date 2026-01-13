@@ -23,22 +23,7 @@ class AddExpensePage extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final imagePro = ref.watch(imageProvider.notifier);
     return Scaffold(
-      drawer: MyDrawer(),
-      appBar: AppBar(
-        title: Text('Add expenses'),
-        actions: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: FirebaseAuth.instance.currentUser!.photoURL != null
-                ? CircleAvatar(
-                    backgroundImage: NetworkImage(
-                      FirebaseAuth.instance.currentUser!.photoURL!,
-                    ),
-                  )
-                : Icon(Icons.person),
-          ),
-        ],
-      ),
+      appBar: AppBar(title: Text('Add expenses')),
       body: Padding(
         padding: const EdgeInsets.only(left: 15, right: 15, bottom: 25),
         child: SingleChildScrollView(

@@ -13,15 +13,21 @@ class DbProvider extends ChangeNotifier {
   Color color = Colors.teal;
 
   Future upLoadExpenseToDb(Expense expense) async {
-    FirebaseFirestore.instance.collection('expensses').add({
-      'title': expense.title,
-      'description': expense.description,
-      'color': expense.color,
-      'cost': expense.cost,
-      'creator': FirebaseAuth.instance.currentUser!.uid,
-      'date': expense.date,
-      'id': expense.id,
-    });
+    try {
+      FirebaseFirestore.instance.collection('expensses').add({
+        'title': expense.title,
+        'description': expense.description,
+        'color': expense.color,
+        'cost': expense.cost,
+        'creator': FirebaseAuth.instance.currentUser!.uid,
+        'date': expense.date,
+        'id': expense.id,
+      });
+    } catch (e) {
+      // ignore: avoid_print
+      print(e.toString());
+    }
+    getDataFromDb();
   }
 
   double sumCosts() {

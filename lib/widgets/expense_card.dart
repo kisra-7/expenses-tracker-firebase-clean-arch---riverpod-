@@ -10,44 +10,26 @@ class ExpenseCard extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return Dismissible(
-      key: Key(expense.id),
-      onDismissed: (direction) {
+    return InkWell(
+      onLongPress: () {
         ref.watch(dbProvider.notifier).deleteExpenseFromDb(index);
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            content: Center(
-              child: Text(
-                'Expense Deleted',
-                style: TextStyle(color: Colors.black, fontSize: 17),
-              ),
-            ),
-          ),
-        );
       },
       child: Container(
-        padding: EdgeInsets.all(20),
-        margin: EdgeInsets.all(1.5),
+        margin: EdgeInsets.all(3),
         decoration: BoxDecoration(
-          color: Color(expense.color),
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(17),
+          color: Colors.teal,
         ),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              expense.title,
-              style: TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-              ),
+              ref.watch(dbProvider).expensesList[index].title,
+              style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
             ),
-            Text(expense.description, style: TextStyle(color: Colors.white)),
             Text(
-              expense.cost.toString(),
-              style: TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-              ),
+              '${ref.watch(dbProvider).expensesList[index].cost.toStringAsFixed(0)} OMR',
+              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
             ),
           ],
         ),
