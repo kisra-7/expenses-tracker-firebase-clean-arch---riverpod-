@@ -1,4 +1,4 @@
-import 'package:expenses_tracker/features/expenses/domain/repositroy/expense_repository.dart';
+import 'package:expenses_tracker/features/expenses/domain/repository/expense_repository.dart';
 
 class DeleteExpenseUseCase {
   final ExpenseRepository _repo;

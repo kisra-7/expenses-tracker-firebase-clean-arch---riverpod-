@@ -1,5 +1,5 @@
 // lib/features/auth/presentation/pages/sign_up_page.dart
-import 'package:expenses_tracker/features/auth/presentation/controlllers/auth_controllers.dart';
+import 'package:expenses_tracker/features/auth/presentation/controllers/auth_controllers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 

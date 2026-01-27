@@ -1,5 +1,5 @@
 // lib/features/auth/presentation/pages/sign_in_page.dart
-import 'package:expenses_tracker/features/auth/presentation/controlllers/auth_controllers.dart';
+import 'package:expenses_tracker/features/auth/presentation/controllers/auth_controllers.dart';
 import 'package:expenses_tracker/features/auth/presentation/providers/auth_providers.dart';
 import 'package:expenses_tracker/features/expenses/presentation/pages/home_page.dart';
 import 'package:flutter/material.dart';

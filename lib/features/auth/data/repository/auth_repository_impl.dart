@@ -1,4 +1,4 @@
-import 'package:expenses_tracker/features/auth/data/data%20source/remote_firebase_auth.dart';
+import 'package:expenses_tracker/features/auth/data/datasoures/remote_firebase_auth.dart';
 import 'package:expenses_tracker/features/auth/domain/repositroy/auth_repository.dart';
 
 class AuthRepositoryImpl implements AuthRepositrory {

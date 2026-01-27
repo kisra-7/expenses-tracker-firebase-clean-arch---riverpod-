@@ -1,7 +1,7 @@
-import 'package:expenses_tracker/features/expenses/data/data%20source/firebase_data_source.dart';
+import 'package:expenses_tracker/features/expenses/data/datasoures/firebase_data_source.dart';
 import 'package:expenses_tracker/features/expenses/data/dto/expense_dto.dart';
 import 'package:expenses_tracker/features/expenses/domain/entitiy/expense_entitiy.dart';
-import 'package:expenses_tracker/features/expenses/domain/repositroy/expense_repository.dart';
+import 'package:expenses_tracker/features/expenses/domain/repository/expense_repository.dart';
 
 class ExpenseRepositoryImpl implements ExpenseRepository {
   final FirebaseDataSource _remote;
