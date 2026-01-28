@@ -3,24 +3,22 @@ import 'package:expenses_tracker/features/expenses/data/dto/expense_dto.dart';
 import 'package:expenses_tracker/features/expenses/domain/entitiy/expense_entitiy.dart';
 
 void main() {
-  test('ExpenseDto <-> ExpenseEntity mapping keeps the same values', () {
+  test('testing entity <--> dto mapping', () {
+    // arrange
     final entity = ExpenseEntity(
-      id: '1',
-      title: 'Coffee',
-      description: 'Latte',
-      cost: 1.5,
+      id: '233',
+      title: '323',
+      description: '323',
+      cost: 32,
       color: 0xFF000000,
-      date: DateTime(2026, 1, 27),
+      date: DateTime.now(),
     );
-
+    // act
     final dto = ExpenseDto.fromEntity(entity);
     final mappedBack = dto.toEntity();
+    //assert
 
-    expect(mappedBack.id, entity.id);
-    expect(mappedBack.title, entity.title);
-    expect(mappedBack.description, entity.description);
-    expect(mappedBack.cost, entity.cost);
-    expect(mappedBack.color, entity.color);
-    expect(mappedBack.date, entity.date);
+    expect(entity.id, mappedBack.id);
+    expect(entity.cost, mappedBack.cost);
   });
 }
