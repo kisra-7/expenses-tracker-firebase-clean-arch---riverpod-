@@ -1,5 +1,5 @@
 // lib/features/expenses/presentation/pages/add_expense_page.dart
-import 'package:expenses_tracker/features/expenses/domain/entitiy/expense_entitiy.dart';
+import 'package:expenses_tracker/features/expenses/domain/entities/expense_entitiy.dart';
 import 'package:expenses_tracker/features/expenses/presentation/controllers/color_controller.dart';
 import 'package:expenses_tracker/features/expenses/presentation/controllers/expensses_controller.dart';
 import 'package:flex_color_picker/flex_color_picker.dart';

@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:expenses_tracker/features/expenses/data/dto/expense_dto.dart';
-import 'package:expenses_tracker/features/expenses/domain/entitiy/expense_entitiy.dart';
+import 'package:expenses_tracker/features/expenses/domain/entities/expense_entitiy.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 class FirebaseDataSource {

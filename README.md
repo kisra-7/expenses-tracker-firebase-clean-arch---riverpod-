@@ -1,17 +1,80 @@
-# expenses_tracker
+# Expenses Tracker App
 
-A new Flutter project.
+A simple Flutter application for tracking daily expenses.  
+This project focuses on writing **clean, readable, and maintainable Flutter code** while building a real, usable app.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## ✨ What the app does
 
-A few resources to get you started if this is your first Flutter project:
+- Add and delete expenses
+- View total expenses
+- Clean and simple UI
+- Light & Dark theme support
+- Firebase integration
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-hello there is some changes in the read me file
+## 🗂 Project Structure
+
+The project follows a **feature-based structure**.
+
+Each feature (such as `expenses` or `auth`) is organized into:
+- data
+- domain
+- presentation
+
+This makes the codebase easier to understand and scale.
+
+---
+
+## 🧱 Architecture
+
+The app uses **Clean Architecture** to keep responsibilities separated and the code easy to maintain.
+
+Business logic is separated from UI, and data sources are isolated behind repositories.
+
+---
+
+## 🔄 State Management
+
+State management is handled using **Riverpod**.
+
+- Controllers manage the logic
+- UI reacts to state changes
+- Async states (loading / error / data) are handled cleanly
+
+---
+
+## 🧪 Testing
+
+Basic testing is included to ensure the core functionality works as expected:
+
+- Unit tests for business logic
+- Widget tests for UI behavior
+- Mocking dependencies using `mocktail`
+
+The focus is on testing **logic and behavior**, not framework internals.
+
+---
+
+## 📸 Screenshots
+
+<table>
+  <tr>
+    <td><img src="screenshots/home.png" width="200"/></td>
+    <td><img src="screenshots/add_expense_dark_page.png" width="200"/></td>
+    <td><img src="screenshots/drawer.png" width="200"/></td>
+    <td><img src="screenshots/add_expense_page.png" width="200"/></td>
+  </tr>
+</table>
+
+> Replace the image names above with your actual screenshot file names if needed.
+
+---
+
+## 🚀 Run the project
+
+```bash
+flutter pub get
+flutter run

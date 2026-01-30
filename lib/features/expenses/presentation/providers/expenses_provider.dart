@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:expenses_tracker/features/auth/presentation/providers/auth_providers.dart';
-import 'package:expenses_tracker/features/expenses/data/datasoures/firebase_data_source.dart';
+import 'package:expenses_tracker/features/expenses/data/datasources/firebase_data_source.dart';
 import 'package:expenses_tracker/features/expenses/data/repository/expense_repository_impl.dart';
 import 'package:expenses_tracker/features/expenses/domain/usecases/add_expense_use_case.dart';
 import 'package:expenses_tracker/features/expenses/domain/usecases/delete_expense_use_case.dart';

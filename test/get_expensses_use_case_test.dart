@@ -1,9 +1,8 @@
-import 'package:expenses_tracker/features/expenses/domain/entitiy/expense_entitiy.dart';
+import 'mocks/mock_expense_repository.dart';
+import 'package:expenses_tracker/features/expenses/domain/entities/expense_entitiy.dart';
 import 'package:expenses_tracker/features/expenses/domain/usecases/get_expenses_use_case.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
-
-import 'mocks/mock_expense_repository.dart';
 
 void main() {
   late MockExpenseRepository mockRepo;
@@ -21,7 +20,7 @@ void main() {
         id: '4234',
         title: '3424',
         description: 'description',
-        cost: 234,
+        cost: 234.0,
         color: 0xFF000000,
         date: DateTime.now(),
       ),

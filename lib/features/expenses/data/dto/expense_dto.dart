@@ -1,6 +1,6 @@
 // lib/features/expenses/data/dtos/expense_dto.dart
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:expenses_tracker/features/expenses/domain/entitiy/expense_entitiy.dart';
+import 'package:expenses_tracker/features/expenses/domain/entities/expense_entitiy.dart';
 
 class ExpenseDto {
   final String id;

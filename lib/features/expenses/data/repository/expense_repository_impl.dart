@@ -1,6 +1,6 @@
-import 'package:expenses_tracker/features/expenses/data/datasoures/firebase_data_source.dart';
+import 'package:expenses_tracker/features/expenses/data/datasources/firebase_data_source.dart';
 import 'package:expenses_tracker/features/expenses/data/dto/expense_dto.dart';
-import 'package:expenses_tracker/features/expenses/domain/entitiy/expense_entitiy.dart';
+import 'package:expenses_tracker/features/expenses/domain/entities/expense_entitiy.dart';
 import 'package:expenses_tracker/features/expenses/domain/repository/expense_repository.dart';
 
 class ExpenseRepositoryImpl implements ExpenseRepository {

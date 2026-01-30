@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:expenses_tracker/features/expenses/data/dto/expense_dto.dart';
-import 'package:expenses_tracker/features/expenses/domain/entitiy/expense_entitiy.dart';
+import 'package:expenses_tracker/features/expenses/domain/entities/expense_entitiy.dart';
 
 void main() {
   test('testing entity <--> dto mapping', () {

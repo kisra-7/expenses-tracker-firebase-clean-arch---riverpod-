@@ -1,6 +1,7 @@
 // lib/features/expenses/presentation/pages/home_page.dart
 import 'package:expenses_tracker/features/expenses/presentation/controllers/expensses_controller.dart';
 import 'package:expenses_tracker/features/expenses/presentation/pages/add_expense_page.dart';
+import 'package:expenses_tracker/features/expenses/presentation/widgets/my_drawer.dart';
 import 'package:expenses_tracker/features/theme/presentation/widgets/theme_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -16,7 +17,7 @@ class HomePage extends ConsumerWidget {
     final controller = ref.read(expenseControllerProvider.notifier);
 
     return Scaffold(
-      drawer: Drawer(child: Column(children: [ThemeCard()])),
+      drawer: MyDrawer(),
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.teal[300],
         child: const Icon(Icons.add, size: 25),

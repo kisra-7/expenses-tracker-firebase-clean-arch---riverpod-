@@ -1,5 +1,5 @@
 // lib/features/expenses/presentation/widgets/expense_card.dart
-import 'package:expenses_tracker/features/expenses/domain/entitiy/expense_entitiy.dart';
+import 'package:expenses_tracker/features/expenses/domain/entities/expense_entitiy.dart';
 import 'package:expenses_tracker/features/expenses/presentation/controllers/expensses_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

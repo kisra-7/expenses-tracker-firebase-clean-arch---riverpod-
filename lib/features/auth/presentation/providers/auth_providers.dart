@@ -1,10 +1,10 @@
 import 'package:expenses_tracker/features/auth/data/datasoures/remote_firebase_auth.dart';
 import 'package:expenses_tracker/features/auth/data/repository/auth_repository_impl.dart';
 import 'package:expenses_tracker/features/auth/domain/repositroy/auth_repository.dart';
-import 'package:expenses_tracker/features/auth/domain/useases/google_sign_in.dart';
-import 'package:expenses_tracker/features/auth/domain/useases/sign_in.dart';
-import 'package:expenses_tracker/features/auth/domain/useases/sign_out.dart';
-import 'package:expenses_tracker/features/auth/domain/useases/sign_up.dart';
+import 'package:expenses_tracker/features/auth/domain/usecases/google_sign_in.dart';
+import 'package:expenses_tracker/features/auth/domain/usecases/sign_in.dart';
+import 'package:expenses_tracker/features/auth/domain/usecases/sign_out.dart';
+import 'package:expenses_tracker/features/auth/domain/usecases/sign_up.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_sign_in/google_sign_in.dart';

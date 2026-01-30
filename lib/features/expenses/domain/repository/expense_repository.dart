@@ -1,4 +1,4 @@
-import 'package:expenses_tracker/features/expenses/domain/entitiy/expense_entitiy.dart';
+import 'package:expenses_tracker/features/expenses/domain/entities/expense_entitiy.dart';
 
 abstract class ExpenseRepository {
   Future<List<ExpenseEntity>> getExpensses();
