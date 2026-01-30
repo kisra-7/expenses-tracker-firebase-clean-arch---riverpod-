@@ -73,7 +73,7 @@ The focus is on testing **logic and behavior**, not framework internals.
 
 ---
 
-## 🚀 Run the project
+##  Run the project
 
 ```bash
 flutter pub get
