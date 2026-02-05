@@ -12,7 +12,7 @@ This project focuses on writing **clean, readable, and maintainable Flutter code
 - Clean and simple UI
 - Light & Dark theme support
 - Firebase integration
-- Firebase Authentecation
+
 ---
 
 ##  Project Structure
@@ -84,9 +84,3 @@ I enjoy building real-world applications, solving problems, and improving code q
 ```bash
 flutter pub get
 flutter run
-
-
-
-
-
-
