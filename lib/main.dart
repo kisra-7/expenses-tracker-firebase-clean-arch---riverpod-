@@ -1,3 +1,4 @@
+import 'package:expenses_tracker/core/notifications/local_notification.dart';
 import 'package:expenses_tracker/features/auth/presentation/pages/sign_in_page.dart';
 import 'package:expenses_tracker/features/expenses/presentation/pages/home_page.dart';
 import 'package:expenses_tracker/features/theme/presentation/controllers/theme_controller.dart';
@@ -11,6 +12,7 @@ import 'features/theme/presentation/providers/theme_providers.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await LocalNotification.init();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   final prefs = await SharedPreferences.getInstance();
 

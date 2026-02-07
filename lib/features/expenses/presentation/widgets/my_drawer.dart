@@ -1,3 +1,4 @@
+import 'package:expenses_tracker/core/notifications/local_notification.dart';
 import 'package:expenses_tracker/features/theme/presentation/widgets/theme_card.dart';
 import 'package:flutter/material.dart';
 
@@ -32,7 +33,12 @@ class MyDrawer extends StatelessWidget {
                       borderRadius: BorderRadius.circular(15),
                       color: Colors.teal,
                     ),
-                    child: Text('S E T T I N G S'),
+                    child: InkWell(
+                      onTap: () {
+                        LocalNotification.showBasicNotification();
+                      },
+                      child: Text('S E T T I N G S'),
+                    ),
                   ),
                   ThemeCard(),
                 ],
