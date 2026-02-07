@@ -34,9 +34,7 @@ class MyDrawer extends StatelessWidget {
                       color: Colors.teal,
                     ),
                     child: InkWell(
-                      onTap: () {
-                        LocalNotification.showBasicNotification();
-                      },
+                      onTap: () {},
                       child: Text('S E T T I N G S'),
                     ),
                   ),

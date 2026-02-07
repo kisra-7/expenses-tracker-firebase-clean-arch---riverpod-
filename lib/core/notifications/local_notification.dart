@@ -22,6 +22,8 @@ class LocalNotification {
         >();
 
     await androidImpl?.requestNotificationsPermission();
+
+    await androidImpl?.requestExactAlarmsPermission();
   }
 
   static void showBasicNotification() async {
@@ -39,6 +41,27 @@ class LocalNotification {
       title: 'daily reminder',
       body: 'Any expenses to add ?',
       notificationDetails: details,
+    );
+  }
+
+  static void showRepeatedNotification() async {
+    NotificationDetails details = NotificationDetails(
+      android: AndroidNotificationDetails(
+        'id 2',
+        'Reapeated notification channel',
+        importance: Importance.max,
+        channelDescription: 'repeating discreption',
+        priority: Priority.max,
+      ),
+    );
+
+    await flutterLocalNotificationsPlugin.periodicallyShow(
+      id: 1,
+      title: 'daily reminder',
+      body: 'Any expenses to add ?',
+      notificationDetails: details,
+      repeatInterval: RepeatInterval.everyMinute,
+      androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
     );
   }
 }
